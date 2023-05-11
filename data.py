@@ -14,7 +14,9 @@ deta = Deta(st.secrets["data_key"])
 
 # Create a new database "example-db"
 # If you need a new database, just use another name.
-db = deta.Base("key_reg")
+db = deta.Base("
+project_face_reg
+")
 
 # If the user clicked the submit button,
 # write the data from the form to the database.
