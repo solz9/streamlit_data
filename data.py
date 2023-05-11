@@ -1,5 +1,5 @@
 import streamlit as st
-# from deta import Deta
+from deta import Deta
 # import database
 # deta = 'c0qy5dgedq2_SNHHnXR1972LBCNH5fcgizZzuaAT4XtA'
 # Data to be written to Deta Base
