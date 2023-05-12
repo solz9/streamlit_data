@@ -1,5 +1,6 @@
 import streamlit as st
 from deta import Deta
+import cv2
 # import database
 # deta = 'c0qy5dgedq2_SNHHnXR1972LBCNH5fcgizZzuaAT4XtA'
 # Data to be written to Deta Base
@@ -20,7 +21,7 @@ db = deta.Base("key_reg")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "pic": img})
+    db.put({"name": name, "pic": img.imread()})
 
 "---"
 "Here's everything stored in the database:"
