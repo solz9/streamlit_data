@@ -30,4 +30,4 @@ if img_file_buffer is not None:
     bytes_data = img_file_buffer.getvalue()
     # Check the type of bytes_data:
     # Should output: <class 'bytes'>
-    st.write(type(bytes_data))
+    st.write(bytes_data)
