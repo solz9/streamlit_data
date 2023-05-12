@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 from deta import Deta
-img_file_buffer = st.camera_input("Take a picture")
+# img_file_buffer = st.camera_input("Take a picture")
 deta = Deta(st.secrets["data_key"])
 db = deta.Base("key_reg")
 # if img_file_buffer is not None:
