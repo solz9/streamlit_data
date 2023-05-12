@@ -3,7 +3,8 @@ from PIL import Image
 import numpy as np
 
 img_file_buffer = st.camera_input("Take a picture")
-
+deta = Deta(st.secrets["data_key"])
+db = deta.Base("key_reg")
 if img_file_buffer is not None:
     # To read image file buffer as a PIL Image:
     img = Image.open(img_file_buffer)
@@ -18,3 +19,7 @@ if img_file_buffer is not None:
     # Check the shape of img_array:
     # Should output shape: (height, width, channels)
     st.write(img_array.shape)
+    db.put({"pic": img_array})
+________________________________________
+
+
