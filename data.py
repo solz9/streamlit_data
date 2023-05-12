@@ -5,21 +5,23 @@ from deta import Deta
 img_file_buffer = st.camera_input("Take a picture")
 deta = Deta(st.secrets["data_key"])
 db = deta.Base("key_reg")
-if img_file_buffer is not None:
-    # To read image file buffer as a PIL Image:
-    img = Image.open(img_file_buffer)
+# if img_file_buffer is not None:
 
-    # To convert PIL Image to numpy array:
-    img_array = np.array(img)
-
-    # Check the type of img_array:
-    # Should output: <class 'numpy.ndarray'>
-    st.write(type(img_array))
-
-    # Check the shape of img_array:
-    # Should output shape: (height, width, channels)
-    st.write(img_array.shape)
-    db.put({"pic": img_array})
-________________________________________
+#     img = Image.open(img_file_buffer)
 
 
+#     img_array = np.array(img)
+
+
+#     st.write(type(img_array))
+
+#     st.write(img_array.shape)
+#     db.put({"pic": img_array})
+# ________________________________________
+
+with st.form("form"):
+    name = st.text_input("Your name")
+    img = st.camera_input('Chụp ảnh')
+    submitted = st.form_submit_button("Store in database")
+if submitted:
+    db.put({"name": name, "pic": img})
