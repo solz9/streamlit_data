@@ -20,11 +20,11 @@ db = deta.Base("project_face_reg")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age})
+    db.put({"key": name, "age": age})
 
 "---"
 "Here's everything stored in the database:"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
 # db_content = db.fetch().items
-st.write(db.get('name'))
+st.write(db.get('Dương Huệ Mẫn'))
