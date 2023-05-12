@@ -1,7 +1,7 @@
 # Khang Trương
 import streamlit as st
 from PIL import Image
-import deta as Deta
+from deta import Deta
 
 # Step 4: Capture the image using st.camera_input()
 image = st.camera_input('take picture')
