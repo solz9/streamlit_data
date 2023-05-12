@@ -7,8 +7,8 @@ from deta import Deta
 image = st.camera_input('take picture')
 
 # Step 5: Convert the image data to a suitable format (e.g., bytes)
-image_bytes = image.read()
-st.write(type(image_bytes))
+# image_bytes = image.read()
+st.write(image.format)
 # Step 6: Initialize the Deta base
 # deta = Deta(st.secrets["data_key"])
 # db = deta.Base("key_reg")
