@@ -8,17 +8,14 @@ with st.form("form"):
     submitted = st.form_submit_button("Store in database")
 
 deta = Deta(st.secrets["data_key"])
-db = deta.Base("project_face_reg")
-if img_file_buffer is not None:
+db = deta.Base("project_face_reg")'
+if submitted:
+    if img_file_buffer is not None:
 
-    img = Image.open(img_file_buffer)
-
-
-    img_array = np.array(img)
+        img = Image.open(img_file_buffer)
 
 
-    st.write(type(img_array))
+        img_array = np.array(img)
 
-    st.write(img_array.shape)
-    db.put({'key': name, "pic": img_array})
+        db.put({'key': name, "pic": img_array})
 
