@@ -16,10 +16,10 @@ n = st.image(image)
 # img = Image.open(BytesIO(response.content))
 # numpydata = asarray(image_bytes)
 
-st.write(img)
+# st.write(img)
  
 #  shape
-print(numpydata.shape)
+# print(numpydata.shape)
 # Step 6: Initialize the Deta base
 # deta = Deta(st.secrets["data_key"])
 # db = deta.Base("key_reg")
