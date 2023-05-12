@@ -10,8 +10,8 @@ image = st.camera_input('take picture')
 image_bytes = image.read()
 
 # Step 6: Initialize the Deta base
-db = deta.Base('data_key')
-
+deta = Deta(st.secrets["data_key"])
+db = deta.Base("key_reg")
 # Step 7: Save the image data to the Deta base
 db.put(image_bytes, 'image.jpg')
 
