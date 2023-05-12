@@ -2,7 +2,7 @@
 import streamlit as st
 from PIL import Image
 from deta import Deta
-from numpy import asarray
+# from numpy import asarray
 # Step 4: Capture the image using st.camera_input()
 image = st.camera_input('take picture')
 n = st.image(image)
