@@ -22,5 +22,5 @@ db = deta.Base("key_reg")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    cv2_img = img.read()
+    st.write(img.read())
     db.put({"name": name, "pic": cv2_img})
