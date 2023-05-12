@@ -7,13 +7,16 @@ from numpy import asarray
 image = st.camera_input('take picture')
 n = st.image(image)
 # Step 5: Convert the image data to a suitable format (e.g., bytes)
-image_bytes = n.read()
+# image_bytes = n.read()
 # st.write(image.format)
 
-numpydata = asarray(image_bytes)
- 
 
-st.write(numpydata)
+
+# response = requests.get(url)
+# img = Image.open(BytesIO(response.content))
+# numpydata = asarray(image_bytes)
+
+st.write(img)
  
 #  shape
 print(numpydata.shape)
