@@ -22,8 +22,10 @@ db = deta.Base("key_reg")
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
     bytes_data = img.getvalue()
-#     cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
-    db.put({"name": name, "pic": bytes_data})
+    cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+    db.put({"name": name, "pic": cv2_img})
+    """with open(cv2_img.name, "wb") as f:
+            f.write(cv2_img.getbuffer())
 
 "---"
 "Here's everything stored in the database:"
