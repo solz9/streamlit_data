@@ -2,13 +2,21 @@
 import streamlit as st
 from PIL import Image
 from deta import Deta
-
+from numpy import asarray
 # Step 4: Capture the image using st.camera_input()
 image = st.camera_input('take picture')
 
 # Step 5: Convert the image data to a suitable format (e.g., bytes)
 # image_bytes = image.read()
-st.write(image.format)
+# st.write(image.format)
+
+numpydata = asarray(image)
+ 
+
+st.write(numpydata)
+ 
+#  shape
+print(numpydata.shape)
 # Step 6: Initialize the Deta base
 # deta = Deta(st.secrets["data_key"])
 # db = deta.Base("key_reg")
