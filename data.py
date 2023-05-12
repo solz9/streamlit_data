@@ -27,7 +27,6 @@ if submitted:
     """with open(cv2_img.name, "wb") as f:
             f.write(cv2_img.getbuffer())
 
-# "---"
-# "Here's everything stored in the database:"
+
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
