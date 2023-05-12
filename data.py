@@ -16,12 +16,13 @@ deta = Deta(st.secrets["data_key"])
 # Create a new database "example-db"
 # If you need a new database, just use another name.
 db = deta.Base("key_reg")
-bytes_data = img.getvalue()
-cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
+
 # If the user clicked the submit button,
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
+    bytes_data = img.getvalue()
+    cv2_img = cv2.imdecode(np.frombuffer(bytes_data, np.uint8), cv2.IMREAD_COLOR)
     db.put({"name": name, "pic": cv2_img})
 
 "---"
