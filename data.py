@@ -5,7 +5,7 @@ from deta import Deta
 from numpy import asarray
 # Step 4: Capture the image using st.camera_input()
 image = st.camera_input('take picture')
-
+n = st.image(image)
 # Step 5: Convert the image data to a suitable format (e.g., bytes)
 image_bytes = image.read()
 # st.write(image.format)
