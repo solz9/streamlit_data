@@ -17,5 +17,5 @@ if submitted:
 
         img_array = np.array(img)
 
-        db.put({'key': name, "pic": img_array})
+        db.put({'key': name, "pic": img_array.tolist()})
 
