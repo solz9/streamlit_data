@@ -21,7 +21,8 @@ db = deta.Base("key_reg")
 
 with st.form("form"):
     name = st.text_input("Your name")
-    img = st.camera_input('Chụp ảnh')
+#     img = st.camera_input('Chụp ảnh')
+    age = st.number_input('Your age')
     submitted = st.form_submit_button("Store in database")
 if submitted:
-    db.put({"name": name, "pic": img})
+    db.put({"key": name, "tuổi": age})
