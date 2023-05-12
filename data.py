@@ -1,6 +1,7 @@
 import streamlit as st
 from deta import Deta
 import cv2
+from PIL import Image
 # import database
 # deta = 'c0qy5dgedq2_SNHHnXR1972LBCNH5fcgizZzuaAT4XtA'
 # Data to be written to Deta Base
@@ -23,5 +24,3 @@ db = deta.Base("key_reg")
 if submitted:
     cv2_img = img.read()
     db.put({"name": name, "pic": cv2_img})
-"""with open(cv2_img.name, "wb") as f:
-        f.write(cv2_img.getbuffer())
