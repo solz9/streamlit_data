@@ -26,5 +26,3 @@ if submitted:
     db.put({"name": name, "pic": cv2_img})
     """with open(cv2_img.name, "wb") as f:
             f.write(cv2_img.getbuffer())
-
-
