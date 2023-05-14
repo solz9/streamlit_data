@@ -5,7 +5,7 @@ import io
 DETA_KEY = "c0ub5ly8vj3_8JHKeMTN4yEGj6wJGNj16nNww4mRwFJE" # Secret key to connect to deta drive
 deta = Deta(DETA_KEY) # Initialize deta object with a project key
 
-drive = deta.Drive("face_regis") # Connecting to the Deta drive
+drive = deta.Drive("face_registration") # Connecting to the Deta drive
 name = st.text_input('nhập tên')
 # Here i'm taking the input from `st.file_uploader`, same principle can be  applied.
 uploaded_files = st.camera_input("Choose photos to upload")
