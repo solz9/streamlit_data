@@ -7,5 +7,5 @@ imgs = st.camera_input('Take a picture')
 if imgs is not None:
     img = st.image(imgs)
 
-    st.download_button(img)
+    st.download_button(label="Download image", data=img,)
 # print(images)
