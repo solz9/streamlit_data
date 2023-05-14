@@ -2,7 +2,7 @@
 import streamlit as st
 from deta import Deta
 import io
-DETA_KEY = "c0ub5ly8vj3_8JHKeMTN4yEGj6wJGNj16nNww4mRwFJE" # Secret key to connect to deta drive
+DETA_KEY = "c0ub5ly8vj3_NXGqau6ih8xRuPk1jyeD5uFUPyMTk4ck" # Secret key to connect to deta drive
 deta = Deta(DETA_KEY) # Initialize deta object with a project key
 
 drive = deta.Drive("face_registration") # Connecting to the Deta drive
@@ -18,10 +18,10 @@ with st.form("my_form"):
         for uploaded_file in uploaded_files: # Iterating over each file uploaded
             file = io.BytesIO(uploaded_file)
             file = file.read() # Read the data
-        #     image_result = open(uploaded_file.name, 'wb') # creates a writable image and later we can write the decoded result
-        #     image_result.write(file) # Saves the file with the name uploaded_file.name to the root path('./')
-        #     pic_names.append(uploaded_file.name) # Append the name of image to the list
-        #     image_result.close() # Close the file pointer
+            image_result = open(uploaded_file.name, 'wb') # creates a writable image and later we can write the decoded result
+            image_result.write(file) # Saves the file with the name uploaded_file.name to the root path('./')
+            pic_names.append(uploaded_file.name) # Append the name of image to the list
+            image_result.close() # Close the file pointer
 
         for i in range(len(pic_names)): # Iterating over each file name
             names = name # Getting the name of current file
