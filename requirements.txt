@@ -1,3 +1,3 @@
 deta==1.1.0
 opencv-contrib-python-headless
-beautifulsoup4==4.12.2
+beautifulsoup4ư
