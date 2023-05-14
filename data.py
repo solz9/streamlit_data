@@ -20,7 +20,7 @@ for uploaded_file in uploaded_files: # Iterating over each file uploaded
 #     image_result.write(file) # Saves the file with the name uploaded_file.name to the root path('./')
 #     pic_names.append(uploaded_file.name) # Append the name of image to the list
 #     image_result.close() # Close the file pointer
-if submit_button:
+if uploaded_files:
     for i in range(len(pic_names)): # Iterating over each file name
         names = name # Getting the name of current file
         path ='./'+pic_names[i] # Creating path string which is basically ["./image.jpg"]
