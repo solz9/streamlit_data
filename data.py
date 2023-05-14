@@ -5,7 +5,7 @@ import io
 DETA_KEY = "c0ub5ly8vj3_NXGqau6ih8xRuPk1jyeD5uFUPyMTk4ck" # Secret key to connect to deta drive
 deta = Deta(DETA_KEY) # Initialize deta object with a project key
 
-drive = deta.Drive("face_registration") # Connecting to the Deta drive
+drive = deta.Drive("registration") # Connecting to the Deta drive
 with st.form("my_form"):
     name = st.text_input('nhập tên')
 #     Here i'm taking the input from `st.file_uploader`, same principle can be  applied.
