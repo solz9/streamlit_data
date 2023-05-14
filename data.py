@@ -1,7 +1,7 @@
 # Imports
 import streamlit as st
 from deta import Deta
-
+import io
 DETA_KEY = "c0ub5ly8vj3_8JHKeMTN4yEGj6wJGNj16nNww4mRwFJE" # Secret key to connect to deta drive
 deta = Deta(DETA_KEY) # Initialize deta object with a project key
 
@@ -11,9 +11,11 @@ drive = deta.Drive("face_regis") # Connecting to the Deta drive
 uploaded_files = st.camera_input("Choose photos to upload")
 st.set_option('deprecation.showfileUploaderEncoding', False) # Enabling the automatic file decoder
 
+file = io.BytesIO(b'this is a byte string')
 pic_names = [] # Later used for deleting the local files after being uploaded
 for uploaded_file in uploaded_files: # Iterating over each file uploaded
-    file = uploaded_file.read() # Read the data
+    file = io.BytesIO(uploaded_file)
+    file = file.read() # Read the data
     image_result = open(uploaded_file.name, 'wb') # creates a writable image and later we can write the decoded result
     image_result.write(file) # Saves the file with the name uploaded_file.name to the root path('./')
     pic_names.append(uploaded_file.name) # Append the name of image to the list
