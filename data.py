@@ -26,6 +26,6 @@ with st.form("my_form"):
         for i in range(len(pic_names)): # Iterating over each file name
             name = pic_names[i] # Getting the name of current file
             path ='./'+pic_names[i] # Creating path string which is basically ["./image.jpg"]
-            drive.put(names, path=path) # so, we have our file name and path, so uploading images to the drive
+            drive.put(name, path=path) # so, we have our file name and path, so uploading images to the drive
             os.remove(pic_names[i]) # Finally deleting it from root folder
         st.success('Thanks for uploading!') # Success message
