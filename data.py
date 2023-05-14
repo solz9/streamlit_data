@@ -8,7 +8,7 @@ deta = Deta(DETA_KEY) # Initialize deta object with a project key
 drive = deta.Drive("face_regis") # Connecting to the Deta drive
 
 # Here i'm taking the input from `st.file_uploader`, same principle can be  applied.
-uploaded_files = st.camera_input("Choose photos to upload", accept_multiple_files=True, type=['png', 'jpeg', 'jpg'])
+uploaded_files = st.camera_input("Choose photos to upload", type=['png', 'jpeg', 'jpg'])
 st.set_option('deprecation.showfileUploaderEncoding', False) # Enabling the automatic file decoder
 
 pic_names = [] # Later used for deleting the local files after being uploaded
