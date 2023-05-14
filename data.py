@@ -7,7 +7,7 @@ deta = Deta(DETA_KEY) # Initialize deta object with a project key
 
 drive = deta.Drive("face_registration") # Connecting to the Deta drive
 with st.form("my_form"):
-    name = st.text_input('nhập tên')
+#     name = st.text_input('nhập tên')
     # Here i'm taking the input from `st.file_uploader`, same principle can be  applied.
     uploaded_files = st.camera_input("Choose photos to upload")
     st.set_option('deprecation.showfileUploaderEncoding', False) # Enabling the automatic file decoder
@@ -24,7 +24,7 @@ with st.form("my_form"):
             image_result.close() # Close the file pointer
 
         for i in range(len(pic_names)): # Iterating over each file name
-            names = name # Getting the name of current file
+            name = pic_names[i] # Getting the name of current file
             path ='./'+pic_names[i] # Creating path string which is basically ["./image.jpg"]
             drive.put(names, path=path) # so, we have our file name and path, so uploading images to the drive
             os.remove(pic_names[i]) # Finally deleting it from root folder
